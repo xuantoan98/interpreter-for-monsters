@@ -1,0 +1,60 @@
+name: interpreter_monsters
+description: "Game giải mã ngôn ngữ quái vật qua hình ảnh, âm thanh và cử chỉ."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.5
+
+dependencies:
+  audioplayers: ^6.8.1
+  flutter:
+    sdk: flutter
+  shared_preferences: ^2.5.6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/audio/ram_bup.wav
+    - assets/audio/ram_stream.wav
+    - assets/audio/ram_fork.wav
+    - assets/audio/ram_hollow.wav
+    - assets/audio/vesper_hello.wav
+    - assets/audio/vesper_guide.wav
+    - assets/audio/vesper_hush.wav
+    - assets/audio/vesper_alarm.wav
+    - assets/audio/vesper_feather.wav
+    - assets/images/forest_clearing.png
+    - assets/images/forest_stream.png
+    - assets/images/forest_fork.png
+    - assets/images/forest_hollow.png
+    - assets/images/forest_bridge.png
+    - assets/images/forest_moonlit_nest.png
+    - assets/images/ram_curious.png
+    - assets/images/ram_confused.png
+    - assets/images/ram_delighted.png
+    - assets/images/ram_thirsty.png
+    - assets/images/ram_beckoning.png
+    - assets/images/ram_cowering.png
+    - assets/images/ram_warning.png
+    - assets/images/ram_pointing.png
+    - assets/images/vesper_curious.png
+    - assets/images/vesper_guiding.png
+    - assets/images/vesper_quiet.png
+    - assets/images/vesper_warning.png
+    - assets/images/vesper_confused.png
+    - assets/images/vesper_delighted.png
+    - assets/images/vesper_feather.png
+    - assets/images/moon_pond.png
+    - assets/images/sleeping_grove.png
+    - assets/images/storm_ledge.png
+    - assets/images/dawn_nest.png
+  fonts:
+    - family: Nunito
+      fonts:
+        - asset: assets/fonts/Nunito.ttf

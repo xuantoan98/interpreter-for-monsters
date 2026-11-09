@@ -1,24 +1,36 @@
-# Interpreter for Monsters
+# Phiên dịch cho quái vật
 
-Bộ khung AI agent cho việc xây dựng ứng dụng Flutter. Repo chưa có mã ứng dụng; tên sản phẩm và phạm vi tính năng sẽ được xác định khi bắt đầu làm app.
+Game giải đố giao tiếp với quái vật. Người chơi quan sát tín hiệu, chọn cách diễn giải, chọn phản hồi rồi học ngôn ngữ của từng loài qua kết quả. Repo hiện có **ba giao diện và 11 cuộc gặp**: sáu của Bram, năm của Vesper.
 
-```text
-AGENTS.md                     Quy ước chung cho agent trong repo
-.agents/
-  roles/                      Prompt giao việc theo vai trò
-    product.md
-    flutter-engineer.md
-    reviewer.md
-  skills/                     Skill được Codex nhận diện trong dự án
-    flutter-bootstrap/SKILL.md
-    flutter-feature/SKILL.md
-    flutter-verify/SKILL.md
+## Chạy ứng dụng
+
+Yêu cầu Flutter SDK và Android SDK. Từ thư mục gốc:
+
+```bash
+flutter pub get
+flutter run -d <android-device-id>
 ```
 
-## Bắt đầu
+Kiểm tra mã:
 
-1. Mô tả app muốn xây, nền tảng đích và màn hình hoặc luồng đầu tiên.
-2. Yêu cầu agent dùng `$flutter-bootstrap` để tạo dự án Flutter tại repo này.
-3. Giao từng tính năng với `$flutter-feature`; dùng `$flutter-verify` trước khi bàn giao mã.
+```bash
+dart format --output=none --set-exit-if-changed lib test
+flutter analyze
+flutter test
+```
 
-Các file `roles/` giúp chia công việc lớn cho các agent chuyên trách, nhưng không bắt buộc phải chạy nhiều agent. Sau khi tạo ứng dụng, cập nhật README này bằng lệnh chạy thật và các quyết định kiến trúc đã chọn.
+## Trạng thái hiện tại
+
+- Sáu cuộc gặp Bram nối tiếp năm cuộc gặp Vesper. Vesper mở sau Bram 06; mỗi bài tiếp theo mở khi hoàn thành bài trước.
+- Lựa chọn sai có phản ứng hài hước và manh mối; không giới hạn lượt.
+- Bram dùng ánh cổ/đuôi; Vesper dùng cánh, mắt thứ ba và nhịp hú. Mọi âm quan trọng có vạch nhịp và mô tả chữ; có thể tắt âm.
+- Tiến độ hoàn thành và từ đã học được lưu cục bộ.
+- Bản debug Android đã có đủ hai chặng; cảm giác chơi và độ rõ tín hiệu vẫn cần người chơi mới đánh giá.
+
+## Tài liệu
+
+- [Tiến trình thực thi và bước tiếp theo](process.ms)
+- [Brief sản phẩm](monster_translator_ai_agent_brief.md)
+- [Kế hoạch và thiết kế kỹ thuật](docs/technical_plan.md)
+- [Nghiên cứu mỹ thuật, bộ ảnh và các màn xem trước](docs/design_system.md)
+- [Hướng dẫn agent](AGENTS.md)

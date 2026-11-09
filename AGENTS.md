@@ -1,6 +1,6 @@
 # Hướng dẫn agent cho dự án Flutter
 
-Repo này hiện chứa bộ khung làm việc cho AI agent; ứng dụng Flutter chưa được khởi tạo. Hãy đọc `README.md` để biết cấu trúc và cách bắt đầu.
+Repo đã có ứng dụng Flutter với hai chặng Bram và Vesper. Hãy đọc `README.md`, `process.ms`, `monster_translator_ai_agent_brief.md` và `docs/technical_plan.md` trước khi mở rộng gameplay.
 
 ## Cách làm việc
 
